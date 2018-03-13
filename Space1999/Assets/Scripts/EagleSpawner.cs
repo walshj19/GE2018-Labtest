@@ -70,6 +70,9 @@ public class EagleSpawner : MonoBehaviour {
             if(i == 0){
                 // assign leader behavior
 
+                // set the camera to target the leader
+                GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
+                camera.GetComponent<CameraController>().target = follower;
             }
             else
             {
